@@ -1,0 +1,11 @@
+@model LancheListViewModel
+
+<h2>@Model.CategoriaAtual</h2>
+
+@foreach (var lanche in Model.Lanches)
+{
+    
+    @* @Html.Partial("_LanchesResumo", lanche) -> antigo *@
+    <partial name="_LanchesResumo" for="@lanche" /> @* nova versão *@
+                
+}
